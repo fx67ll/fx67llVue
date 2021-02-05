@@ -30,19 +30,6 @@ const router = new Router({
 
 // 全局路由守卫
 router.beforeEach((to, from, next) => {
-	// 不是首页的话将自动显示返回按钮
-	if (to.name !== 'index') {
-		store.dispatch("setBtnStateAsync", true);
-		if(to.name === 'doc') {
-			store.dispatch("setBtnTypeAsync", 'doc');
-		}else if(to.name === 'splitarea'){
-			store.dispatch("setBtnTypeAsync", 'dev');
-		}else{
-			store.dispatch("setBtnTypeAsync", 'default');
-		}
-	} else {
-		store.dispatch("setBtnStateAsync", false);
-	}
 	next() // 必须使用 next ,执行效果依赖 next 方法的调用参数
 })
 
