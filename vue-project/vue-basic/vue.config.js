@@ -31,9 +31,11 @@ module.exports = {
 	assetsDir: 'static',
 	// 指定生成的 index.html 的输出路径 (相对于 outputDir)，也可以是一个绝对路径
 	indexPath: 'index.html',
-	// 如果你不需要生产环境的 source map，可以将其设置为 false 以加速生产环境构建
+	// 如果你不需要生产环境的 source map，可以将其设置为 false 以加速生产环境构建，并且生产环境中F12不会被看到源码
 	productionSourceMap: false,
+	// Webpack配置
 	configureWebpack: {
+		// 配置别名
 		resolve: {
 			alias: {
 				'@': resolve('src'),
@@ -54,6 +56,8 @@ module.exports = {
 		// host: '0.0.0.0',
 		port: 1111,
 		open: false,
+		// 可以这样设置默认打开chorme
+		// open: 'Google Chrome',
 		proxy: {
 			[process.env.VUE_APP_BASE_API]: {
 				target: `http://localhost:3000`,
