@@ -1,0 +1,42 @@
+{
+	"name": "fx67ll-components-test",
+	"version": "0.0.0",
+	"private": false,
+	"main": "lib/fx67ll-components-test.umd.min.js",
+	"scripts": {
+		"serve": "vue-cli-service serve",
+		"build": "vue-cli-service build",
+		"lib": "vue-cli-service build --target lib --name fx67ll-components-test --dest lib src/components/index.js"
+	},
+	"dependencies": {
+		"core-js": "^2.6.5",
+		"less": "^3.12.2",
+		"less-loader": "^7.0.1",
+		"style-resources-loader": "^1.3.3",
+		"vue": "^2.6.10",
+		"vue-router": "^3.4.3"
+	},
+	"devDependencies": {
+		"@vue/cli-plugin-babel": "^3.8.0",
+		"@vue/cli-service": "^3.8.0",
+		"vue-template-compiler": "^2.6.10"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/fx67ll/fx67llVue.git"
+	},
+	"bugs": {
+		"url": "https://github.com/fx67ll/fx67llVue/issues"
+	},
+	"homepage": "https://github.com/fx67ll/fx67llVue",
+	"keywords": [
+		"fx67ll",
+		"vue",
+		"fx67llVue",
+		"fx67ll-components-test",
+		"fx67llComponentsTest"
+	],
+	"description": "Vue Components Test Basic File Project!",
+	"author": "fx67ll@github.com",
+	"license": "MIT"
+}

@@ -1,0 +1,13 @@
+/dist/
+/node_modules/
+/public/
+/src/
+/.env.development
+/.env.production
+/.gitignore
+/.npmignore
+/babel.config.js
+/package-back.json
+/package-lock.json
+/postcss.config.js
+/vue.config.js
