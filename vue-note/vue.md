@@ -109,3 +109,26 @@
 
 ### Vue 如何手撸一个生命周期的钩子函数？
 （总不能一直做一个API调用者吧）
+
+### 如何实现组件库的按需引入？
+1. 通过插件`babel-plugin-import`来实现组建的按需引入
+2. 在根目录下的`.babelrc.js`文件中添加配置
+```
+module.exports = {
+	"presets": ["@vue/app"],
+	"plugins": [
+		[
+			"import",
+			{
+				"libraryName": "map-lib-test", // 组件库名称
+				"camel2DashComponentName": false, // 关闭驼峰自动转链式
+				"camel2UnderlineComponentName": false // 关闭蛇形自动转链式
+				"style": (name) => { // 引入组价库样式
+					const cssName = name.split('/')[2];
+					return `map-lib-test/lib/style/${cssName}.css`
+				}
+			}
+		],
+	]
+}
+```
