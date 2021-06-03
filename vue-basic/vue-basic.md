@@ -24,3 +24,15 @@ object1.property1 = 77;
 
 console.log(object1.property1);
 ```
+
+#### 语法：`Object.defineProperty(obj, prop, descriptor)`
++ `obj` 要定义属性的对象  
++ `prop` 要定义或修改的属性名称或Symbol（这里单独列出Symbol我还未理解，需要结合ES6那本书详细理解下，文档作出一部分解释看下方PS）  
++ `descriptor` 要定义或修改的属性描述符  
+
+###### 关于Symbol的说明：在ES6中，由于 Symbol类型的特殊性，用Symbol类型的值来做对象的key与常规的定义或修改不同，而Object.defineProperty 是定义key为Symbol的属性的方法之一
+
+#### 返回值：被传给函数的对象
+
+=======================================  
+我觉我需要补习一下js：***对象里目前存在的属性描述符有两种主要形式：数据描述符和存取描述符***
