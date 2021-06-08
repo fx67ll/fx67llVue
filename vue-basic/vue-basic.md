@@ -8,7 +8,8 @@
 2. angular.js 是通过脏值检测的方式比对数据是否有变更，来决定是否更新视图，最简单的方式就是通过 setInterval() 定时轮询检测数据变动，当然Google不会这么low，angular只有在指定的事件触发时进入脏值检测，不过多了解  
 3. 数据劫持: vue.js 则是采用数据劫持结合发布者-订阅者模式的方式，通过`Object.defineProperty()`来劫持各个属性的setter/getter，在数据变动时发布消息给订阅者，触发相应的监听回调  
 
-### Object.defineProperty()
+## Object.defineProperty()
+### 关于该方法的介绍
 `Object.defineProperty()`方法会直接在一个对象上定义一个新属性，或者修改一个对象的现有属性，并返回此对象  
 [参考文档](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)  
 ```
@@ -39,12 +40,12 @@ console.log(object1.property1);
 =======================================  
 
 ### 关于该方法的描述
-* configurable，默认为 false  
-* enumerable，默认为 false  
-* value，可选值，默认为 undefined
-* writable，可选值，默认为 false
-* getter 函数，默认为 undefined
-* setter 函数，默认为 undefined
+* configurable，默认为 false，当且仅当该属性的 configurable 键值为 true 时，该属性的描述符才能够被改变，同时该属性也能从对应的对象上被删除  
+* enumerable，默认为 false，当且仅当该属性的 enumerable 键值为 true 时，该属性才会出现在对象的枚举属性中  
+* value，可选值，默认为 undefined，该属性对应的值；可以是任何有效的 JavaScript 值（数值，对象，函数等）
+* writable，可选值，默认为 false，当且仅当该属性的 writable 键值为 true 时，属性的值，也就是上面的 value，才能被赋值运算符改变
+* getter 函数，默认为 undefined，***暂不记录后期详情学习实践一下***
+* setter 函数，默认为 undefined，***暂不记录后期详情学习实践一下***
 
 =======================================  
 ```
@@ -59,4 +60,17 @@ console.log(object1.property1);
 ```
 =======================================  
 
-下一步学习创建属性
+### 如何利用该方法创建属性
+```
+var o = {}; // 创建一个新对象
+
+// 在对象中添加一个属性与数据描述符的示例
+Object.defineProperty(o, "a", {
+  value : 37,
+  writable : true,
+  enumerable : true,
+  configurable : true
+});
+```
+
+下一步学习创建属性中的，在对象中添加一个设置了存取描述符属性的示例
