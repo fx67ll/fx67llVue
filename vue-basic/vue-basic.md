@@ -61,6 +61,7 @@ console.log(object1.property1);
 =======================================  
 
 ### 如何利用该方法创建属性
+1. 在对象中添加一个属性与数据描述符
 ```
 var o = {}; // 创建一个新对象
 
@@ -71,6 +72,36 @@ Object.defineProperty(o, "a", {
   enumerable : true,
   configurable : true
 });
+
+console.log(o.a); // 对象 o 拥有了属性 a，值为 37
+```
+2. 在对象中添加一个设置了存取描述符属性
+```
+// 在对象中添加一个设置了存取描述符属性的示例
+var bValue = 38;
+Object.defineProperty(o, "b", {
+  // 使用了方法名称缩写（ES2015 特性）
+  // 下面两个缩写等价于：
+  // get : function() { return bValue; },
+  // set : function(newValue) { bValue = newValue; },
+  get() { return bValue; },
+  set(newValue) { bValue = newValue; },
+  enumerable : true,
+  configurable : true
+});
+console.log(o.b);
+// 对象 o 拥有了属性 b，值为 38
+// 现在，除非重新定义 o.b，o.b 的值总是与 bValue 相同
+```
+3. 数据描述符合和存取描述符不能混合使用
+```
+// 数据描述符和存取描述符不能混合使用
+Object.defineProperty(o, "conflict", {
+  value: 0x9f91102,
+  get() { return 0xdeadbeef; }
+});
+// 抛出错误 TypeError: value appears only in data descriptors, get appears only in accessor descriptors
 ```
 
 下一步学习创建属性中的，在对象中添加一个设置了存取描述符属性的示例
+新建一个html和js在代码中实践一下
