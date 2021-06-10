@@ -103,5 +103,4 @@ Object.defineProperty(o, "conflict", {
 // 抛出错误 TypeError: value appears only in data descriptors, get appears only in accessor descriptors
 ```
 
-下一步学习创建属性中的，在对象中添加一个设置了存取描述符属性的示例
-新建一个html和js在代码中实践一下
+下一步学习创建属性上面那个关于继承的内容
