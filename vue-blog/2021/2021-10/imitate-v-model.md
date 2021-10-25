@@ -24,9 +24,11 @@
 
 ### 撸一个`v-model`
 看到这里，相信你也理解了为什么我们会需要在自定义的组件中自定义一个v-model指令，下面我们通过一个简易的示例来撸一个`v-model`，
-在此之前我们需要在一个空`Vue`项目中，定义一个`dad.vue`文件，以及`child.vue`文件。为了方便更多的初学者理解和学习，
-我将一个[完整的简易示例]()放到了github仓库中供大家下载学习，大家如果喜欢可以为了点一颗Star，Thanks♪(･ω･)ﾉ！！！
+在此之前我们需要在一个空`Vue`项目中，定义一个[dad.vue](#jumpId-dad "点击跳转示例代码")文件，以及[child.vue](#jumpId-child "点击跳转示例代码")文件。
+为了方便初学者学习，我将一个[完整的简易示例项目](https://github.com/fx67ll/fx67llVue/tree/master/vue-practice/imitate-v-model)放到了github仓库中供大家下载学习，
+大家如果喜欢可以为了点一颗Star，Thanks♪(･ω･)ﾉ！！！
 
+<span id="jumpId-dad"></span>
 #### dad.vue
 ```
 <template>
@@ -52,6 +54,7 @@
 </script>
 ```
 
+<span id="jumpId-child"></span>
 #### child.vue
 ```
 <template>
@@ -92,5 +95,5 @@
 
 
 我是 [fx67ll.com](https://fx67ll.com)，如果您发现本文有什么错误，欢迎在评论区讨论指正，感谢您的阅读！  
-如果您喜欢这篇文章，欢迎访问我的 [本文github仓库地址]()，为我点一颗Star，Thanks~ :)  
+如果您喜欢这篇文章，欢迎访问我的 [本文github仓库地址](https://github.com/fx67ll/fx67llVue/blob/master/vue-blog/2021/2021-10/imitate-v-model.md)，为我点一颗Star，Thanks~ :)  
 ***转发请注明参考文章地址，非常感谢！！！***
