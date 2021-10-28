@@ -38,6 +38,9 @@ learn Vue
 	</tr>
 </table>
 
+## 0.2.4.20211028
+* fix code type  
+
 ## 0.2.3.20211027
 * 添加ruoyi项目源码学习  
 

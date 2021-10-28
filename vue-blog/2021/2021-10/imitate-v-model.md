@@ -32,7 +32,7 @@
 
 <span id="jumpId-dad"></span>
 #### dad.vue
-```
+```Vue
 <template>
 	<div>
 		<child v-model='childName'></child>
@@ -58,7 +58,7 @@
 
 <span id="jumpId-child"></span>
 #### child.vue
-```
+```Vue
 <template>
 	<!-- vue中的自定义组件中，若父组件中用v-model的话，其实相当于v-bind:value='***'并且v-on:input='***' -->
 	<!-- 因此子组件内部用props接收value值，用$emit触发input事件，默认传递value值和input事件是模拟v-model的默认规则 -->
