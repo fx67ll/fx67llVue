@@ -38,6 +38,9 @@ learn Vue
 	</tr>
 </table>
 
+## 0.2.5.20211104
+* delete useless lib (vue-basic)  
+
 ## 0.2.4.20211028
 * fix code type  
 
