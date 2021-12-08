@@ -38,6 +38,9 @@ learn Vue
 	</tr>
 </table>
 
+## 0.2.6.2021208
+* use `PingFang Regular En.ttf` first (vue-basic)  
+
 ## 0.2.5.20211104
 * delete useless lib (vue-basic)  
 
