@@ -17,11 +17,21 @@ export const fx67llRoutes = [{
 		path: '/',
 		name: 'index',
 		component: () => import('@v/index.vue') //首页
+	},
+	{
+		path: '/404',
+		name: '404',
+		component: () => import('@v/404.vue') //404
+	},
+	{
+		path: '*', //不存在的地址则重定向页面地址
+		redirect: '/404'
 	}
 ]
 
 const router = new Router({
-	mode: 'hash', // history模式，去掉url中的#
+	// mode: 'hash', // hash模式，可以当做静态页面本地访问，但是url中会有#号
+	mode: 'history', // history模式，去掉url中的#
 	scrollBehavior: () => ({
 		y: 0
 	}),
