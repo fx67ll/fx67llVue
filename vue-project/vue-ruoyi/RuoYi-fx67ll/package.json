@@ -1,8 +1,8 @@
 {
-  "name": "fx67ll.vip",
+  "name": "fx67ll.com",
   "version": "0.1.0",
-  "description": "fx67ll‘s 管理系统",
-  "author": "fx67ll‘s ",
+  "description": "fx67ll's 管理系统",
+  "author": "fx67ll",
   "license": "MIT",
   "scripts": {
     "dev": "vue-cli-service serve",
