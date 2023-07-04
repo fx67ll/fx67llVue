@@ -38,6 +38,10 @@ learn Vue
 	</tr>
 </table>
 
+## 0.2.7.20230704
+* 删除老版本ruoyi项目源码  
+* 引入个人处理完毕的ruoyi项目源码，后续其他系统可作为标准化代码基座  
+
 ## 0.2.6.2021208
 * use `PingFang Regular En.ttf` first (vue-basic)  
 
