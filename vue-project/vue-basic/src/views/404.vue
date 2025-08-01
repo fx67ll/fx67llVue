@@ -4,7 +4,7 @@
 			<a class="book home-page" href="https://fx67ll.com" target="_blank">fx67ll.com</a>
 			<a class="book about-us" href="https://fx67ll.xyz" target="_blank">fx67ll.xyz</a>
 			<a class="book contact" href="https://github.com/fx67ll" target="_blank">F.A.Q.</a>
-			<a class="book faq" href="#" @click.prevent="back()">返回上一页</a> <!-- 禁止a标签跳转 -->
+			<a class="book faq" href="#" @click.prevent="back()">返回上一页</a>
 			<span class="book not-found"></span>
 			<span class="door left"></span>
 			<span class="door right"></span>
